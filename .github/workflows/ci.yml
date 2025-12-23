@@ -8,7 +8,7 @@ on:
 
 jobs:
   lint-and-build:
-    name: Lint, Format Check & Build
+    name: Lint, Type Check, Format & Build
     runs-on: ubuntu-latest
 
     strategy:
@@ -33,6 +33,9 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
+
+      - name: Run TypeScript type check
+        run: npm run type-check
 
       - name: Build project
         run: npm run build
