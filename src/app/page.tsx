@@ -1,103 +1,139 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Bot, Settings, Zap, Code, Cpu, MessageCircle } from "lucide-react";
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white p-6 overflow-hidden relative">
+      {/* Animated Background Icons */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Floating Icons */}
+        <div className="absolute top-10 left-12 animate-float opacity-20">
+          <Bot size={80} className="text-cyan-400" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          className="absolute top-20 right-16 animate-float-delay-1 opacity-20"
+          style={{ animationDelay: "1s" }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <Settings size={70} className="text-purple-400" />
+        </div>
+        <div
+          className="absolute bottom-32 left-20 animate-float-delay-2 opacity-20"
+          style={{ animationDelay: "2s" }}
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <Zap size={75} className="text-yellow-400" />
+        </div>
+        <div
+          className="absolute top-1/3 right-32 animate-float opacity-20"
+          style={{ animationDelay: "3s" }}
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <Code size={65} className="text-blue-400" />
+        </div>
+        <div
+          className="absolute bottom-20 right-1/4 animate-float-delay-1 opacity-20"
+          style={{ animationDelay: "2.5s" }}
+        >
+          <Cpu size={70} className="text-pink-400" />
+        </div>
+        <div
+          className="absolute top-1/2 left-1/4 animate-float-delay-2 opacity-20"
+          style={{ animationDelay: "4s" }}
+        >
+          <MessageCircle size={75} className="text-green-400" />
+        </div>
+        <div
+          className="absolute bottom-10 left-1/3 animate-float opacity-15"
+          style={{ animationDelay: "1.5s" }}
+        >
+          <Settings size={60} className="text-indigo-400" />
+        </div>
+        <div
+          className="absolute top-2/3 right-10 animate-float-delay-2 opacity-15"
+          style={{ animationDelay: "3.5s" }}
+        >
+          <Bot size={85} className="text-cyan-300" />
+        </div>
+
+        {/* Gradient Orbs */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse"></div>
+        <div
+          className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center">
+        {/* Animated Title with Gradient Sweep */}
+        <div className="relative mb-6">
+          <h1 className="text-6xl md:text-7xl font-black tracking-wider relative">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+              Welcome to Rohbot
+            </span>
+            {/* Animated Shine Effect */}
+            <div
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30"
+              style={{
+                animation: "sweep 4s infinite",
+              }}
+            ></div>
+          </h1>
+          <style>{`
+            @keyframes sweep {
+              0% {
+                transform: translateX(-100%);
+              }
+              100% {
+                transform: translateX(100%);
+              }
+            }
+            @keyframes float {
+              0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+              }
+              50% {
+                transform: translateY(-20px) rotate(5deg);
+              }
+            }
+          `}</style>
+        </div>
+
+        {/* Subtitle */}
+        <p className="text-lg md:text-xl text-gray-300 mb-12 text-center max-w-lg backdrop-blur-sm bg-white/5 rounded-2xl px-8 py-4 border border-white/10">
+          A clean and simple mock chatbot frontend built with the expertise of Rolynx (Uncle AI)
+        </p>
+
+        {/* CTA Button */}
+        <Link
+          href="/chat"
+          className="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 relative group"
+        >
+          <span className="relative z-10">Go to Chat</span>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </Link>
+      </div>
+
+      <style>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-25px) rotate(8deg);
+          }
+        }
+        
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-float-delay-1 {
+          animation: float 7s ease-in-out infinite;
+        }
+        
+        .animate-float-delay-2 {
+          animation: float 8s ease-in-out infinite;
+        }
+      `}</style>
+    </main>
   );
 }
